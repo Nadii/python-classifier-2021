@@ -63,7 +63,7 @@ Here, the `-i` argument gives the input folder, the `-o` argument gives the outp
 
 Docker and similar platforms allow you to containerize and package your code with specific dependencies that you can run reliably in other computing environments and operating systems.
 
-To guarantee that we can run your code, please [install](https://docs.docker.com/get-docker/) Docker, build a Docker image from your code, and run in on the training data. To quickly check your code for bugs, you may want to run it on a subset of the training data.
+To guarantee that we can run your code, please [install](https://docs.docker.com/get-docker/) Docker, build a Docker image from your code, and run on the training data. To quickly check your code for bugs, you may want to run it on a subset of the training data.
 
 If you have trouble running your code, then please try the follow steps to run the example code, which is known to work.
 
@@ -74,7 +74,8 @@ If you have trouble running your code, then please try the follow steps to run t
         user@computer:~$ cd example
         user@computer:~/example$ mkdir training_data test_data model test_outputs
 
-2. Put the example code from this repository in `python-classifier-2021`, some of the training data in `training_data`, and some of the test data in `test_data`. You can use held-out training data to check your code.
+2. Put the example code from this repository in `python-classifier-2021` (or use the following command to clone this repository in `example`)
+, some of the training data in `training_data`, and some of the test data in `test_data`. You can use held-out training data to check your code.
 
         user@computer:~/example$ git clone https://github.com/physionetchallenges/python-classifier-2021.git
 
@@ -101,6 +102,7 @@ If you have trouble running your code, then please try the follow steps to run t
             ~/example/training_data:/physionet/training_data -v \ 
             image bash
 
+        root@[...]# cd physionet/
         root@[...]:/physionet# ls
             Dockerfile             model             test_data      train_model.py
             extract_leads_wfdb.py  README.md         test_model.py
